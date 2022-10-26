@@ -128,7 +128,7 @@ namespace BackEnd.Services
                     if (conex.State == ConnectionState.Closed)
                     {
                         conex.Open();
-                        var oCursoArq = conex.Query<CursosArq>("SP_UpdateCurso", this.setParameters(oCursosArq), commandType: CommandType.StoredProcedure);
+                        var oCursoArq = conex.Query<CursosArq>("SP_UpdateCurso", this.updateParameters(oCursosArq), commandType: CommandType.StoredProcedure);
                     }
                 }
             }
@@ -144,7 +144,7 @@ namespace BackEnd.Services
             DynamicParameters parameters = new DynamicParameters();
 
             //Esto es solo necesario cuando nuestros datos no son autoincrementables al serlos
-             //El valor del ID debe ir vacio.
+            //El valor del ID debe ir vacio.
             /*if(oCursoArq.Id_Curso != 0)
             {
                 parameters.Add("@Id_Curso", oCursoArq.Id_Curso);
@@ -159,5 +159,22 @@ namespace BackEnd.Services
 
             return parameters;
         }
+
+        private DynamicParameters updateParameters(CursosArq oCursoArq)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+
+            parameters.Add("@Id_Curso", oCursoArq.Id_Curso);
+            parameters.Add("@Id_Admin", oCursoArq.Id_Admin);
+            parameters.Add("@Imagen_Pres", oCursoArq.Imagen_Pres);
+            parameters.Add("@Nombre_Curso", oCursoArq.Nombre_Curso);
+            parameters.Add("@Descripcion", oCursoArq.Descripcion);
+            parameters.Add("@Costo", oCursoArq.Costo);
+            parameters.Add("@Num_Materiales", oCursoArq.Num_Materiales);
+            parameters.Add("@Docente", oCursoArq.Docente);
+
+            return parameters;
+        }
+
     }
 }
