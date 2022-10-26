@@ -108,7 +108,7 @@ namespace BackEnd.Services
                     if (conex.State == ConnectionState.Closed)
                     {
                         conex.Open();
-                        var oVentasArq = conex.Query<VentasArq>("SP_UpdateVenta", this.setParameters(oVentaArq), commandType: CommandType.StoredProcedure);
+                        var oVentasArq = conex.Query<VentasArq>("SP_UpdateVenta", this.updateParameters(oVentaArq), commandType: CommandType.StoredProcedure);
                     }
                 }
             }
@@ -135,6 +135,20 @@ namespace BackEnd.Services
             parameters.Add("@Costo_total", oVentaArq.Costo_Total);
 
             return parameters;
+        }
+
+        private DynamicParameters updateParameters(VentasArq oVentaArq)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+
+            parameters.Add("@Id_Venta", oVentaArq.Id_Venta);
+            parameters.Add("@Id_Curso", oVentaArq.Id_Curso);
+            parameters.Add("@Id_Cliente", oVentaArq.Id_Cliente);
+            parameters.Add("@Descuento", oVentaArq.Descuento);
+            parameters.Add("@Costo_total", oVentaArq.Costo_Total);
+
+            return parameters;
+
         }
     }
 }

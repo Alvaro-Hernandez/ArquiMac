@@ -128,7 +128,7 @@ namespace BackEnd.Services
                     if (conex.State == ConnectionState.Closed)
                     {
                         conex.Open();
-                        var oMaterialesArq = conex.Query<MaterialArq>("SP_UpdateMaterial", this.setParameters(oMaterialArq), commandType: CommandType.StoredProcedure);
+                        var oMaterialesArq = conex.Query<MaterialArq>("SP_UpdateMaterial", this.updateParameters(oMaterialArq), commandType: CommandType.StoredProcedure);
                     }
                 }
             }
@@ -149,6 +149,18 @@ namespace BackEnd.Services
             {
                 parameters.Add("@Id_Material", oCMaterialArq.Id_Material);
             }*/
+            parameters.Add("@Id_Curso", oMaterialArq.Id_Curso);
+            parameters.Add("@Tipo_Material", oMaterialArq.Tipo_Material);
+            parameters.Add("@Almacenado_en", oMaterialArq.Almacenado_en);
+
+            return parameters;
+        }
+
+        private DynamicParameters updateParameters(MaterialArq oMaterialArq)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+
+            parameters.Add("@Id_Material", oMaterialArq.Id_Material);
             parameters.Add("@Id_Curso", oMaterialArq.Id_Curso);
             parameters.Add("@Tipo_Material", oMaterialArq.Tipo_Material);
             parameters.Add("@Almacenado_en", oMaterialArq.Almacenado_en);
