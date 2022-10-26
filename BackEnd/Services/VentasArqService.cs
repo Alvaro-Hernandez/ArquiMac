@@ -18,7 +18,25 @@ namespace BackEnd.Services
         List<VentasArq> _oVentaArqList = new List<VentasArq>();
         public VentasArq AddVentaArq(VentasArq oVentaArq)
         {
-            throw new System.NotImplementedException();
+            _oVentaArq = new VentasArq();
+
+            try
+            {
+                using (IDbConnection conex = new SqlConnection(Global.ConnectionString))
+                {
+                    if (conex.State == ConnectionState.Closed)
+                    {
+                        conex.Open();
+                        var oVenta = conex.Query<VentasArq>("SP_InsertVenta", this.setParameters(oVentaArq),
+                            commandType: CommandType.StoredProcedure);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _oVentaArq.Error = ex.Message;
+            }
+            return _oVentaArq;
         }
 
         public string DeleteVentaArq(int VentaArqId)
