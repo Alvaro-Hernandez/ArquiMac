@@ -128,7 +128,7 @@ namespace BackEnd.Services
                     if (conex.State == ConnectionState.Closed)
                     {
                         conex.Open();
-                        var oDisenosArq = conex.Query<DisenosArq>("SP_UpdateDiseno", this.setParameters(oDisenoArq), commandType: CommandType.StoredProcedure);
+                        var oDisenosArq = conex.Query<DisenosArq>("SP_UpdateDiseno", this.updateParameters(oDisenoArq), commandType: CommandType.StoredProcedure);
                     }
                 }
             }
@@ -149,6 +149,21 @@ namespace BackEnd.Services
             {
                 parameters.Add("@Id_Diseno", oDisenoArq.Id_Diseno);
             }*/
+            parameters.Add("@Id_Admin", oDisenosArq.Id_Admin);
+            parameters.Add("@Descripcion", oDisenosArq.Descripcion);
+            parameters.Add("@Pais_Ubic", oDisenosArq.Pais_Ubic);
+            parameters.Add("@Ciudad_Ubic", oDisenosArq.Ciudad_Ubic);
+            parameters.Add("@Estilo_Art", oDisenosArq.Estilo_Art);
+            parameters.Add("@Creado_por", oDisenosArq.Creado_por);
+
+            return parameters;
+        }
+
+        private DynamicParameters updateParameters(DisenosArq oDisenosArq)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+
+            parameters.Add("@Id_Diseno", oDisenosArq.Id_Diseno);
             parameters.Add("@Id_Admin", oDisenosArq.Id_Admin);
             parameters.Add("@Descripcion", oDisenosArq.Descripcion);
             parameters.Add("@Pais_Ubic", oDisenosArq.Pais_Ubic);
