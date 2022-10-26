@@ -134,7 +134,7 @@ namespace BackEnd.Services
                     if (conex.State == ConnectionState.Closed)
                     {
                         conex.Open();
-                        var oImgDisenoArq = conex.Query<ImagenesDisenosArq>("SP_UpdateImagen", this.setParameters(ImgDisenosArqId), commandType: CommandType.StoredProcedure);
+                        var oImgDisenoArq = conex.Query<ImagenesDisenosArq>("SP_UpdateImagen", this.updateParameters(ImgDisenosArqId), commandType: CommandType.StoredProcedure);
                     }
                 }
             }
@@ -156,6 +156,17 @@ namespace BackEnd.Services
             {
                 parameters.Add("@Id_Imagen", oImgDisenoArq.Id_Imagen);
             }*/
+            parameters.Add("@Id_Diseno", oImgDisenoArq.Id_Diseno);
+            parameters.Add("@Almacenamiento", oImgDisenoArq.Almacenamiento);
+
+            return parameters;
+        }
+
+        private DynamicParameters updateParameters(ImagenesDisenosArq oImgDisenoArq)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+
+            parameters.Add("@Id_Imagen", oImgDisenoArq.Id_Imagen);
             parameters.Add("@Id_Diseno", oImgDisenoArq.Id_Diseno);
             parameters.Add("@Almacenamiento", oImgDisenoArq.Almacenamiento);
 
