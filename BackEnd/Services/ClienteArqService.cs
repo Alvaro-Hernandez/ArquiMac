@@ -128,7 +128,7 @@ namespace BackEnd.Services
                     if (conex.State == ConnectionState.Closed)
                     {
                         conex.Open();
-                        var oClientesArq = conex.Query<ClienteArq>("SP_UpdateCliente", this.setParameters(oClienteArq), commandType: CommandType.StoredProcedure);
+                        var oClientesArq = conex.Query<ClienteArq>("SP_UpdateCliente", this.updateParameters(oClienteArq), commandType: CommandType.StoredProcedure);
                     }
                 }
             }
@@ -148,6 +148,20 @@ namespace BackEnd.Services
             {
                 parameters.Add("@Id_Cliente", oClienteArq.Id_Cliente);
             }*/
+            parameters.Add("@Nombres", oClienteArq.Nombres);
+            parameters.Add("@Apellidos", oClienteArq.Apellidos);
+            parameters.Add("@Usuario", oClienteArq.Usuario);
+            parameters.Add("@Contrasena", oClienteArq.Contraseña);
+            parameters.Add("@Email", oClienteArq.Email);
+
+            return parameters;
+        }
+
+        private DynamicParameters updateParameters(ClienteArq oClienteArq)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+
+            parameters.Add("@Id_Cliente", oClienteArq.Id_Cliente);
             parameters.Add("@Nombres", oClienteArq.Nombres);
             parameters.Add("@Apellidos", oClienteArq.Apellidos);
             parameters.Add("@Usuario", oClienteArq.Usuario);
