@@ -129,7 +129,7 @@ namespace BackEnd.Services
                     if (conex.State == ConnectionState.Closed)
                     {
                         conex.Open();
-                        var oAdminArq = conex.Query<AdministradorArq>("SP_UpdateCurso", this.setParameters(oAdministradorArq), commandType: CommandType.StoredProcedure);
+                        var oAdminArq = conex.Query<AdministradorArq>("SP_UpdateCurso", this.updateParameters(oAdministradorArq), commandType: CommandType.StoredProcedure);
                     }
                 }
             }
@@ -149,6 +149,20 @@ namespace BackEnd.Services
             {
                 parameters.Add("@Id_Admin", oAdminArq.Id_Admin);
             }*/
+            parameters.Add("@Nombres", oAdminArq.Nombres);
+            parameters.Add("@Apellidos", oAdminArq.Apellidos);
+            parameters.Add("@Usuario", oAdminArq.Usuario);
+            parameters.Add("@Contrasena", oAdminArq.Contrasena);
+            parameters.Add("@Email", oAdminArq.Email);
+
+            return parameters;
+        }
+
+        private DynamicParameters updateParameters(AdministradorArq oAdminArq)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+
+            parameters.Add("@Id_Admin", oAdminArq.Id_Admin);
             parameters.Add("@Nombres", oAdminArq.Nombres);
             parameters.Add("@Apellidos", oAdminArq.Apellidos);
             parameters.Add("@Usuario", oAdminArq.Usuario);
