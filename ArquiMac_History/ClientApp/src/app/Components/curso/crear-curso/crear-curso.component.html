@@ -1,0 +1,50 @@
+<div class="container">
+    <h2 style="color: blueviolet; font-family: Cairo; font-weight: bold">Registra un Curso en ArquiMac History</h2>
+    <form [formGroup]="nuevoFormCurso" (ngSubmit)="postCurso(nuevoFormCurso.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1" style="color: blueviolet; font-family:Cairo; font-weight:bold">Id Administrador</label>
+            <input type="number" class="form-control" placeholder="Escriba su Id de Administrador" formControlName="id_Admin">
+        </div>
+        <h3 style="color: tomato;">Imagen de Presentacion</h3>
+        <div class="form-group">
+            <label for="exampleFormControlInput1" style="color: blueviolet; font-family:Cairo; font-weight:bold">Url de la Imagen de Presentacion</label>
+            <input type="url" class="form-control" placeholder="Escriba la url de la Imagen" formControlName="imagen_Pres">
+        </div>
+        <h5 style="font-family:'Cascadia Mono PL';">
+            <small class="text-muted">
+                Nota IMPORTANTE!! Las imagenes deben estar guardadas
+                en el repositorio de ArquiMac History, Con las dimensiones fijas de 780x180
+            </small>
+        </h5>
+
+        <h3 style="color: tomato;">Datos del Curso</h3>
+        <div class="form-group">
+            <label for="exampleFormControlInput1" style="color: blueviolet; font-family:Cairo; font-weight:bold">Nombre del Curso</label>
+            <input type="text" class="form-control" placeholder="Escriba el nombre del Curso" formControlName="nombre_Curso">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1" style="color: blueviolet; font-family:Cairo; font-weight:bold">Descripcion del Curso</label>
+            <input type="text" class="form-control" placeholder="Escriba un maximo de 250 Palabras" formControlName="descripcion">
+        </div>
+        <h3 style="color: tomato;">Datos Adicionales</h3>
+        <div class="form-group row">
+            <div class="col">
+                <label for="exampleFormControlInput1" style="color: blueviolet; font-family:Cairo; font-weight:bold">Costo</label>
+                <input type="number" class="form-control" placeholder="Costo en Dolares" formControlName="costo">
+            </div>
+
+            <div class="col">
+                <label for="exampleFormControlInput1" style="color: blueviolet; font-family:Cairo; font-weight:bold">Numero de Materiales</label>
+                <input type="number" class="form-control" placeholder="Cantidad de Materiales del Curso" formControlName="num_Materiales">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1" style="color: blueviolet; font-family:Cairo; font-weight:bold">Docente</label>
+                <input type="text" class="form-control" placeholder="Example Ing. Alvaro Hernandez" formControlName="docente">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success" style="margin-bottom:10px;">Guardar</button>
+        <button type="button" class="btn btn-dark" style="margin-bottom:10px; margin-left: 15px;" (click)="Salir()">Salir</button>
+    </form>
+
+</div>

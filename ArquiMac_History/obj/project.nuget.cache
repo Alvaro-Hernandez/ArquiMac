@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "mVxbbEP597GN9CFMulrDT2KuZ7AUEW/Mb1WLtYFZ61NgXJ8YwNcRCTYBJizuh6W1Govn4POuJvZOy8zyYDRv1Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alvaro\\source\\repos\\ArquiMac_History\\ArquiMac_History\\ArquiMac_History.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\3.1.28\\microsoft.aspnetcore.nodeservices.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.aspnetcore.spaservices\\3.1.28\\microsoft.aspnetcore.spaservices.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\3.1.28\\microsoft.aspnetcore.spaservices.extensions.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.28\\microsoft.extensions.configuration.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.28\\microsoft.extensions.configuration.abstractions.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.28\\microsoft.extensions.configuration.binder.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.28\\microsoft.extensions.dependencyinjection.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.28\\microsoft.extensions.dependencyinjection.abstractions.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.28\\microsoft.extensions.fileproviders.abstractions.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.1.28\\microsoft.extensions.fileproviders.physical.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.28\\microsoft.extensions.filesystemglobbing.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.logging\\3.1.28\\microsoft.extensions.logging.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.28\\microsoft.extensions.logging.abstractions.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.logging.configuration\\3.1.28\\microsoft.extensions.logging.configuration.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.logging.console\\3.1.28\\microsoft.extensions.logging.console.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.options\\3.1.28\\microsoft.extensions.options.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.28\\microsoft.extensions.options.configurationextensions.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.28\\microsoft.extensions.primitives.3.1.28.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\microsoft.typescript.msbuild\\4.8.4\\microsoft.typescript.msbuild.4.8.4.nupkg.sha512",
+    "C:\\Users\\Alvaro\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

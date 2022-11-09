@@ -1,0 +1,15 @@
+<h1>Observemos los Cursos de ArquiMac History</h1>
+<button (click)="CrearCurso()" class="btn btn-info" style="margin-bottom:10px;">Registrar un Curso</button>
+<div class="card mb-3" *ngFor="let curso of cursos">
+    <img class="card-img-top" src="{{curso.imagen_Pres}}" alt="Card image cap">
+    <div class="card-body">
+        <h6>Identificacion del Curso: {{curso.id_Curso}}</h6>
+        <h5 class="card-title">{{curso.nombre_Curso}}</h5>
+        <p class="card-text">{{curso.descripcion}}</p>
+        <p class="card-text"><small class="text-muted">Costo: ${{curso.costo}}.</small></p>
+        <p class="card-text"><small class="text-muted">Docente: {{curso.docente}}.</small></p>
+        <p class="card-text"><small class="text-muted">Num Materiales: {{curso.num_Materiales}}.</small></p>
+        <button class="btn btn-warning" style="margin-left: 70%; position: absolute; margin-top: -4.5%; " (click)="EditarCurso(curso.id_Curso)">Editar</button>
+        <button class="btn btn-danger" style="margin-left:78%; position:absolute; margin-top:-4.5%;" (click)="EliminarCurso(curso.id_Curso)">Eliminar</button>
+    </div>
+</div>

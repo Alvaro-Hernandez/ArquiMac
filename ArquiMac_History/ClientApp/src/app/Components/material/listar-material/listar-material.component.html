@@ -1,0 +1,16 @@
+<h2 style="color:blueviolet; font-family:'Cascadia Code PL'; margin-bottom:20px;">Materiales de los Curso ArquiMac History</h2>
+<button class="btn btn-dark" (click)="goCrearMateriales()">Crear Materiales</button>
+
+<div class="media" *ngFor="let material of dateMaterial" style="margin-top:30px;">
+    <img src="https://raw.githubusercontent.com/Alvaro-Hernandez/img_card/backend/carpeta.png" class="mr-3" alt="Documentos" style="width: 100px; height: 100px;">
+    <div class="media-body">
+        <h5 class="mt-0" style="color:darkslateblue; font-family:'Cairo'; font-weight:bold;">Tipo de Material del Curso: {{material.tipo_Material}}</h5>
+        <h5 class="mt-0" style="color: tomato; font-family: 'Bahnschrift'; font-weight:bold;"><small> Id de Material: {{material.id_Material}}</small></h5>
+        <h5 class="mt-0" style="color: darkred; font-family: 'Bahnschrift'; font-weight:bold;"><small>Id del Curso: {{material.id_Curso}}</small></h5>
+        <p style="color: dodgerblue; font-family: 'Comic Sans MS';"> <strong style="color: darkviolet;">Recursos almacenados en:</strong> {{material.almacenado_en}}</p>
+    </div>
+    <div style="display:flex; flex-direction:column;">
+        <button class="btn btn-warning" (click)="goEditar(material.id_Material)">Editar</button>
+        <button class="btn btn-danger" style="margin-top:15px;" (click)="Eliminar(material.id_Material)">Eliminar</button>
+    </div>
+</div>

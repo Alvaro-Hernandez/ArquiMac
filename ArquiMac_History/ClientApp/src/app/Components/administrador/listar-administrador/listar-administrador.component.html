@@ -1,0 +1,27 @@
+<h1>Administradores de ArquiMac History</h1>
+<button (click)="CrearAdministrador()" class="btn btn-info" style="margin-bottom:10px;">Registrar Administrador</button>
+
+<table id="customers" class='table table-striped table-dark'>
+    <tr>
+        <th>Id_Admin</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Usuario</th>
+        <th>Funcion-Editar</th>
+        <th>Funcion-Eliminar</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let administrador of administradores">
+            <td scope="row">{{administrador.id_Admin}}</td>
+            <td>{{administrador.nombres}}</td>
+            <td>{{administrador.apellidos}}</td>
+            <td>{{administrador.usuario}}</td>
+            <td>
+                <button class="btn btn-warning" style="margin-left:20px" (click)="EditarAdmin(administrador.id_Admin)">Editar</button>
+            </td>
+            <td>
+                <button class="btn btn-danger" style="margin-left:20px"(click)="Eliminar(administrador.id_Admin)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

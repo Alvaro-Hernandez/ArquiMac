@@ -1,0 +1,42 @@
+<div class="container">
+    <h3>Actualiza tus Datos</h3>
+    <form [formGroup]="editarFormAdmin" (ngSubmit)="putAdmin(editarFormAdmin.value)">
+        <h3>Identificacion</h3>
+        <div class="form-group row">
+            <div class="col">
+                <label for="exampleFormControlInput1">Id Unico</label>
+                <input type="number" class="form-control" placeholder="Id del Empleado" formControlName="id_Admin" readonly>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombres</label>
+            <input type="text" class="form-control" placeholder="Actualice Nombres" formControlName="nombres">
+        </div>
+
+        <h3>Apellidos Y Otros Datos</h3>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Apellidos</label>
+            <input type="text" class="form-control" placeholder="Actualice Apellidos" formControlName="apellidos">
+        </div>
+        <h3>Datos de Acceso</h3>
+        <div class="form-group row">
+            <div class="col">
+                <label for="exampleFormControlInput1">Email</label>
+                <input type="text" class="form-control" placeholder="Actualice su Email" formControlName="email">
+            </div>
+
+            <div class="col">
+                <label for="exampleFormControlInput1">Usuario</label>
+                <input type="text" class="form-control" placeholder="Actualice su Usuario" formControlName="usuario">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1">Credencial de Acceso</label>
+                <input type="text" class="form-control" placeholder="Actualice su Contrasena" formControlName="contrasena">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success" style="margin-bottom:20px;">Guardar</button>
+        <button type="button" class="btn btn-dark" style="margin-bottom:20px; margin-left: 15px;" (click)="Salir()">Salir</button>
+    </form>
+
+</div>

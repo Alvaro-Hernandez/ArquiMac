@@ -1,0 +1,24 @@
+<div class="container">
+    <h2 style="color: forestgreen; font-family: Cairo; font-weight: bold">Registra los Materiales de los Curso en ArquiMac History</h2>
+    <form [formGroup]="nuevoFormMaterial" (ngSubmit)="postMaterial(nuevoFormMaterial.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1" style="color: dodgerblue; font-family:Cairo; font-weight:bold">Id del Curso</label>
+            <input type="number" class="form-control" placeholder="Escriba el Id del Curso" formControlName="id_Curso">
+        </div>
+
+        <h3 style="color: grey;">Datos de los Materiales</h3>
+        <label for="exampleFormControlInput1" style="color: dodgerblue; font-family:Cairo; font-weight:bold">Seleccione un Tipo de Archivo</label>
+        <select class="form-control" style="margin-bottom:20px;" formControlName="tipo_Material">
+            <option disabled selected="selected">Seleccione un Tipo</option>
+            <option value="Documento">Documento</option>
+            <option value="Video">Video</option>
+        </select>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1" style="color: grey; font-family: Cairo; font-weight: bold">Describa donde se Encuentra almacenado el Material</label>
+            <input type="text" class="form-control" placeholder="Escriba un maximo de 250 Palabras" formControlName="almacenado_en">
+        </div>
+        <button type="submit" class="btn btn-success" style="margin-bottom:10px;">Guardar</button>
+        <button type="button" class="btn btn-dark" style="margin-bottom:10px; margin-left: 15px;" (click)="Salir()">Salir</button>
+    </form>
+</div>

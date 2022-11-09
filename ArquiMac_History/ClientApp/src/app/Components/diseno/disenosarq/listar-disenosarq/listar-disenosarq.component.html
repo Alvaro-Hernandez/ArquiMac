@@ -1,0 +1,16 @@
+<h2 style="color: darkseagreen; font-family: Cairo; font-weight: bold">Disenos Arquitectonicos de ArquiMac History</h2>
+<button (click)="CrearDiseno()" class="btn btn-info" style="margin-bottom:10px;">Crear Diseno o Estilo</button>
+<div class="jumbotron" *ngFor="let diseno of disenos" style="margin-top:10px;">
+    <h1 class="display-4" style="color:lightseagreen; font-family:'Californian FB'; margin-top:-45px;">{{diseno.estilo_Art}}</h1>
+    <p class="lead" style="color: black; font-family: 'Segoe UI Variable Display';">{{diseno.descripcion}}</p>
+    <hr class="my-4">
+    <h5 class="card-text" style="color:darkolivegreen;">Pais: {{diseno.pais_Ubic}}.</h5>
+    <h5 class="card-text" style="color:darkolivegreen;">Ciudad: {{diseno.ciudad_Ubic}}.</h5>
+    <h5 class="card-text" style="color:darkolivegreen;">Nacimiento: {{diseno.creado_por}}.</h5>
+    <h5 class="card-text" style="color:darkolivegreen;">Id Diseno: {{diseno.id_Diseno}}.</h5>
+    <hr class="my-4">
+    <div>
+        <button class="btn btn-warning" style="margin-right: 20px;" (click)="Editar(diseno.id_Diseno)">Editar</button>
+        <button class="btn btn-danger" (click)="Eliminar(diseno.id_Diseno)">Eliminar</button>
+    </div>
+</div>
