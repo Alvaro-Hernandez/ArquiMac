@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data.SqlTypes;
@@ -19,5 +20,6 @@ namespace BackEnd.Models
         [Required, StringLength(50)]
         public string Creado_por { get; set; }
         public string Error { get; set; }
+        //public List<ImagenesDisenosArq> imgDisenos { get; set; }
     }
 }

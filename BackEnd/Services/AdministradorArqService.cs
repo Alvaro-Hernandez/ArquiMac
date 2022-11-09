@@ -129,7 +129,7 @@ namespace BackEnd.Services
                     if (conex.State == ConnectionState.Closed)
                     {
                         conex.Open();
-                        var oAdminArq = conex.Query<AdministradorArq>("SP_UpdateCurso", this.updateParameters(oAdministradorArq), commandType: CommandType.StoredProcedure);
+                        var oAdminArq = conex.Query<AdministradorArq>("SP_UpdateAdmin", this.updateParameters(oAdministradorArq), commandType: CommandType.StoredProcedure);
                     }
                 }
             }
