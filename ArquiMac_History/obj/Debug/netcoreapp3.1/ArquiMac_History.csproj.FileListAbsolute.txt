@@ -49,3 +49,8 @@ C:\Users\Alvaro\source\repos\ArquiMac_History\ArquiMac_History\obj\Debug\netcore
 C:\Users\Alvaro\source\repos\ArquiMac_History\ArquiMac_History\obj\Debug\netcoreapp3.1\ArquiMac_History.dll
 C:\Users\Alvaro\source\repos\ArquiMac_History\ArquiMac_History\obj\Debug\netcoreapp3.1\ArquiMac_History.pdb
 C:\Users\Alvaro\source\repos\ArquiMac_History\ArquiMac_History\obj\Debug\netcoreapp3.1\ArquiMac_History.genruntimeconfig.cache
+C:\Users\Alvaro\source\repos\ArquiMac_History\ArquiMac_History\obj\Debug\netcoreapp3.1\staticwebassets\ArquiMac_History.StaticWebAssets.Pack.cache
+C:\Users\Alvaro\source\repos\ArquiMac_History\ArquiMac_History\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.ArquiMac_History.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Alvaro\source\repos\ArquiMac_History\ArquiMac_History\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.ArquiMac_History.props
+C:\Users\Alvaro\source\repos\ArquiMac_History\ArquiMac_History\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.ArquiMac_History.props
+C:\Users\Alvaro\source\repos\ArquiMac_History\ArquiMac_History\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.ArquiMac_History.props

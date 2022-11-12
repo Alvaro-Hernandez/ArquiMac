@@ -13,8 +13,8 @@
                 <h5 style="color:white; font-family:'Oswald'"> Disenos y Estilos Arquitectonicos</h5>
                 <h5 style="color: white; font-family:'Oswald'">ArquiMac History</h5>
                 <h5 style="color: white; font-family: 'Oswald'">Id del Diseno: {{imgDiseno.id_Diseno}}</h5>
-                <button class="btn btn-warning" style="margin-right:15px;">Editar</button>
-                <button class="btn btn-danger">Eliminar</button>
+                <button class="btn btn-warning" style="margin-right:15px;" (click)="goImgDiseno(imgDiseno.id_Imagen)">Editar</button>
+                <button class="btn btn-danger" (click)="goImgDisenoDelete(imgDiseno.id_Imagen)">Eliminar</button>
             </div>
         </div>
     </div>

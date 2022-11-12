@@ -19,4 +19,15 @@ export class ListarImagesarqComponent implements OnInit {
             .subscribe(Data => this.disenosImg = Data);
     }
 
+    goImgDiseno(id) {
+        this.router.navigate(["EditarImagearq", id]);
+    }
+
+    goImgDisenoDelete(id) {
+        this.service.deleteImgDiseno(id).subscribe(Data => {
+            console.log(Data);
+            alert("Datos Eliminados");
+        });
+        window.location.reload();
+    }
 }
