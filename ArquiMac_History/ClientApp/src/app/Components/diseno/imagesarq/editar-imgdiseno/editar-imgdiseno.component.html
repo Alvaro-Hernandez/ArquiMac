@@ -1,1 +1,25 @@
-<p>editar-imgdiseno works!</p>
+<div class="container">
+    <h2 style="color: forestgreen; font-family: Cairo; font-weight: bold">Edita la Procedencia de tu Imagen</h2>
+    <form [formGroup]="editarFormImgArq" (ngSubmit)="putImgDiseno(editarFormImgArq.value)">
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1" style="color: dodgerblue; font-family:Cairo; font-weight:bold">Id de la Imagen</label>
+            <input type="number" class="form-control" placeholder="Escriba el Id del Diseno" formControlName="id_Imagen" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1" style="color: dodgerblue; font-family:Cairo; font-weight:bold">Id del Diseno</label>
+            <input type="number" class="form-control" placeholder="Escriba el Id del Diseno" formControlName="id_Diseno">
+        </div>
+
+        <h3 style="color: grey;">Datos de la Procedencia de la Imagen</h3>
+        <div class="form-group">
+            <label for="exampleFormControlInput1" style="color: grey; font-family: Cairo; font-weight: bold">Escriba donde se Encuentra almacenado la Imagen del Diseno</label>
+            <input type="text" class="form-control" placeholder="Escriba la url de la imagen" formControlName="almacenamiento">
+        </div>
+        <button type="submit" class="btn btn-success" style="margin-bottom:10px;">Guardar</button>
+        <button type="button" class="btn btn-dark" style="margin-bottom:10px; margin-left: 15px;" (click)="Salir()">Salir</button>
+    </form>
+</div>
+
+
