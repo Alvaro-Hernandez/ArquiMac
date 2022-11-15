@@ -1,0 +1,17 @@
+<div class="container">
+    <h2 style="color: forestgreen; font-family: Cairo; font-weight: bold">Creemos la Coleccion de Imagenes de Diseno</h2>
+    <form [formGroup]="nuevoFormImgArq" (ngSubmit)="postImgDiseno(nuevoFormImgArq.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1" style="color: dodgerblue; font-family:Cairo; font-weight:bold">Id del Diseno</label>
+            <input type="number" class="form-control" placeholder="Escriba el Id del Diseno" formControlName="id_Diseno">
+        </div>
+
+        <h3 style="color: grey;">Datos de la Procedencia de la Imagen</h3>
+        <div class="form-group">
+            <label for="exampleFormControlInput1" style="color: grey; font-family: Cairo; font-weight: bold">Escriba donde se Encuentra almacenado la Imagen del Diseno</label>
+            <input type="text" class="form-control" placeholder="Escriba la url de la imagen" formControlName="almacenamiento">
+        </div>
+        <button type="submit" class="btn btn-success" style="margin-bottom:10px;">Guardar</button>
+        <button type="button" class="btn btn-dark" style="margin-bottom:10px; margin-left: 15px;" (click)="Salir()">Salir</button>
+    </form>
+</div>

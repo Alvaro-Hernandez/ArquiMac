@@ -30,4 +30,8 @@ export class ListarImagesarqComponent implements OnInit {
         });
         window.location.reload();
     }
+
+    goCrearIma() {
+        this.router.navigate(["CrearImagearq"]);
+    }
 }

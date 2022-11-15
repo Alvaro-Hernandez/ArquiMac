@@ -27,6 +27,7 @@ import { ListarImagesarqComponent } from './Components/diseno/imagesarq/listar-i
 import { CrearDisenoarqComponent } from './Components/diseno/disenosarq/crear-disenoarq/crear-disenoarq.component';
 import { EditarDisenoarqComponent } from './Components/diseno/disenosarq/editar-disenoarq/editar-disenoarq.component';
 import { EditarImgdisenoComponent } from './Components/diseno/imagesarq/editar-imgdiseno/editar-imgdiseno.component';
+import { CrearImagedisenoarqComponent } from './Components/diseno/imagesarq/crear-imagedisenoarq/crear-imagedisenoarq.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { EditarImgdisenoComponent } from './Components/diseno/imagesarq/editar-i
     CrearDisenoarqComponent,
     EditarDisenoarqComponent,
     EditarImgdisenoComponent,
+    CrearImagedisenoarqComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -70,7 +72,9 @@ import { EditarImgdisenoComponent } from './Components/diseno/imagesarq/editar-i
         { path: 'ListarImagesarq', component: ListarImagesarqComponent },
         { path: 'CrearDisenoarq', component: CrearDisenoarqComponent },
         { path: 'EditarDisenoarq/:id_Diseno', component: EditarDisenoarqComponent },
-        { path: 'EditarImagearq/:id_Imagen', component: EditarImgdisenoComponent }
+        { path: 'EditarImagearq/:id_Imagen', component: EditarImgdisenoComponent },
+        { path: 'CrearImagearq', component: CrearImagedisenoarqComponent }
+
     ])
     ],
     providers: [FuncionAdministradorService, FuncionCursosService, FuncionDisenoArqService, FuncionImagenArqService, FuncionMaterialService],
